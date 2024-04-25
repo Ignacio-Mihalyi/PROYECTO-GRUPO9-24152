@@ -31,77 +31,147 @@ header{
     color: #000; /* Cambiar el color del texto al pasar el ratón */
 }
 
-#carouselExampleCaptions{
-    width: 90vw;
-    height: auto; /* Mantener proporción de la imagen */
-    display: block; /* Convertir la imagen en un bloque */
-    margin-left: auto; /* Centrar horizontalmente */
-    margin-right: auto; 
-}
-
-.pimag1{
-    color:#ffffff;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    /*background: linear-gradient(to right, #e913de, rgb(191, 160, 219));*/
-}
 
 @media screen and (max-width: 720px) {
-    .pimag1{
-        font-size: 5px;
-    }
-    .pimag2{
-        font-size: 5px;
-    }
-    .pimag3{
-        font-size: 5px;
-    }
     .menu li a{
         font-size: 15px;
     }
 }
 @media screen and (max-width: 480px) {
-    .pimag1{
-        font-size: 2.5px;
-    }
-    .pimag2{
-        font-size: 2.5px;
-    }
-    .pimag3{
-        font-size: 10px;
-    }
     .menu li a{
         font-size: 10px;
     }
 }
 
-.pimag2{
-    color: #000000;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-}
-
-.pimag3{
-    color:#ffffff;
-    text-shadow: 8px 8px 10px rgba(255, 255, 255, 0.5);
-    font-weight: bold;
-}
-
 .titulo{
     font-weight: bold;
     color: #000;
+    background-color: rgb(195, 169, 218);
     text-align: center;
-    padding: 20px;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5)
+    padding: 20px 0 20px 0;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    background-color: #e7b9fa;
+    
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 30px 15%;
+}
+
+.graficos{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: min(100%, 350px);
+    height: 500px;
+    padding: 30px 25px;
+    background: #fff;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    border-radius: 45px;
+}
+.graficos:hover{
+    transform: translateY(20px);
+}
+.graficos:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    opacity: 0;
+    border-radius: 40px;
+}
+
+.graficos:hover:after{
+    opacity: 1;
+}
+
+.graficos>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40px;
+}
+
+.graficos.info{
+    position: relative;
+    z-index: 3;
+    color: #ffffff;
+    opacity: 0;
+    transform: rotateY(30px);
+    transition: all 0.5s;
+}
+.graficos:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+    color: #fff;
+}
+.graficos.info h1{
+    font-size: 1.4rem;
+    margin: 0;
+    color: #fff;
+}
+.graficos.info p{
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin: 10px 0 25px;
+    line-height: 130%;
+}
+.graficos .info .btn{
+    text-decoration: none;
+    padding: 0,5rem 1rem;
+    background: #fff;
+    color: #000000;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.graficos .info .btn:hover{
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    background-color: #e913de;
+    color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+    .contenedor{
+        grid-template-columns: repeat(2, 1fr); /*Pasamos a 2 columnas */
+    }
+}
+@media screen and (max-width: 480px) {
+    .contenedor{
+        grid-template-columns: 1fr; /*Pasamos a una columna */;
+    }
 }
 
 .texto{ 
     color: #000;
     text-align: justify;
-    padding: 2em;
+    padding: 2em 2em 2em 2em;
     margin-left: 2em;
     margin-right: 2em;
+    width: 90%;
+    grid-column: 1 / span 3;
 }
+
 @media screen and (max-width: 768px) {
     .titulo{
         font-size: 15px;
@@ -118,16 +188,9 @@ header{
         font-size: 10px;
     }
 }
-body{
-    padding: 0;
-    margin: 0;
-}
 
-footer{ 
+footer{
     background-color: rgb(191, 160, 219);
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 .redes{
@@ -138,9 +201,22 @@ footer{
     margin-left: 10px;
     width: 100%;
 }
-.whatsapp{
-    color: #1eff00;
+
+.redes li{
+    display: inline-block;
 }
-.instagram{
-    color: #ff4800;
+
+.redes li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.redes li a:hover{
+    background-color: #e913de; /* Cambiar el color de fondo al pasar el ratón */
+    color: #000; /* Cambiar el color del texto al pasar el ratón */
+}
+
+footer p{
+    padding: 10px;
 }
