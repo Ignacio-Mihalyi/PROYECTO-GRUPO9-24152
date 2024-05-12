@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+} 
+
+header{
+    background-color: rgb(191, 160, 219);
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.menu li{
+    display: inline-block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu li a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000
+}
+
+.menu li a:hover{
+    background-color: #e913de;
+    color: #000;
+}
+
+.titulo {
+    margin: 0;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+    color: #000;
+    background-color: rgb(195, 169, 218);
+    padding: 10px 20px;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+  background-color: #e7b9fa;  
+  display:flex;
+}
+
+.contenedor{
+    width: 100%;
+}
+
+.info{
+    padding-left: 5px;
+    padding-right:5px;
+}
+.info h2 {
+    text-align: center;
+    font-size: 1.5em;   
+}
+
+.info p {
+    text-align:justify;
+}
+
+.donaciones h3 {
+    text-align:center
+}
+
+.donaciones p {
+    font-size: 1.2em;
+    text-align:center;
+}
+
+footer {
+    background-color: rgb(191, 160, 219);
+    margin-top: 5px;
+    margin:10 px;
+    width: 100%;
+    height: 100%;
+}
+
+.redes{
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    text-align: left;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.redes li{
+    display: inline-block;
+}
+
+.redes li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.redes li a:hover{
+    background-color: #e913de;
+    color: #000; 
+}
+
+footer p {
+    margin: 0;
+    padding: 10px;
+}
