@@ -33,3 +33,7 @@ form{
     margin-bottom: 10px;
     background-color: #e5d8f5;
 }
+
+footer img {
+  float: right;
+}

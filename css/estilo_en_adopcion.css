@@ -88,6 +88,10 @@ footer {
     height: 100%;
 }
 
+footer img {
+    float: right;
+}
+
 .redes{
     list-style-type: none; 
     padding: 0; 

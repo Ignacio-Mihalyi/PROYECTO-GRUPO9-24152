@@ -193,6 +193,10 @@ footer{
     background-color: rgb(191, 160, 219);
 }
 
+footer img {
+    float: right;
+}
+
 .redes{
     list-style-type: none; /* Eliminar los puntos de la lista */
     padding: 0; /* Eliminar el relleno */
